@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewSwitcher1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/dialog_img_Loading_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+    <ScrollView
+
+        android:id="@+id/myscr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+            <!--Slider-->
+            <RelativeLayout
+                android:id="@+id/vp_container"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#fff"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager_slider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+
+                    android:gravity="center"
+                    />
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/slider_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/view_pager_slider1"
+                    app:ci_drawable="@drawable/minus_fill"
+                    app:ci_drawable_unselected="@drawable/minus"
+                    app:ci_orientation="horizontal"/>
+            </RelativeLayout>
+
+            <!--Recycler View-->
+            <RelativeLayout
+                android:id="@+id/rel_section1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vp_container"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/lin_sec1_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/section_drawable">
+
+
+                    <ImageView
+                        android:id="@+id/img_more_sec1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_more"/>
+
+                    <TextView
+                        android:id="@+id/txt_collection_names_section1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/img_more_sec1"
+                        android:padding="5dp"
+                        android:text="جدیدترین ها"
+                        android:textColor="#fff"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_show_more_sp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="بیشتر"
+                        android:textColor="#fff"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_section1_home_frg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lin_sec1_header"
+                    android:layout_marginBottom="8dp"
+                    android:focusable="false"
+                    android:layoutAnimation="@anim/layout_animation_fall_down"
+                    android:nestedScrollingEnabled="false"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_section2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_section1"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/lin_sec2_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/section_drawable">
+
+                    <ImageView
+                        android:id="@+id/img_more_sec2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ic_more"/>
+
+                    <TextView
+                        android:id="@+id/txt_collection_names_section2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/img_more_sec2"
+                        android:padding="5dp"
+                        android:text="محبوب ترین ها"
+                        android:textColor="#fff"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/txt_show_more_sp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="بیشتر"
+                        android:textColor="#fff"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rec_section2_home_frg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lin_sec2_header"
+                    android:layout_marginBottom="8dp"
+                    android:focusable="false"
+                    android:layoutAnimation="@anim/layout_animation_fall_down"
+                    android:nestedScrollingEnabled="false"/>
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec_home_frg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rel_section2"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:nestedScrollingEnabled="false"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</ViewSwitcher>

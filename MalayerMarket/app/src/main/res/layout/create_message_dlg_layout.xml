@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/lin_top_msg"
+        android:background="@color/primary"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:textColor="#FFF"
+        android:textSize="18sp"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_marginBottom="10dp"
+        android:text="ایجاد پیام جدید"
+        android:layout_height="?android:attr/actionBarSize"/>
+
+    <EditText
+        android:layout_below="@id/lin_top_msg"
+        android:id="@+id/edt_msg_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:lines="1"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text_border"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="عنوان پیام"
+        android:padding="8dp"
+        android:textSize="13sp"
+        android:textColor="#000"/>
+    <EditText
+        android:layout_below="@id/edt_msg_title"
+        android:id="@+id/edt_msg_text"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="12dp"
+        android:textSize="13sp"
+        android:background="@drawable/edit_text_border"
+        android:gravity="right"
+        android:hint="متن پیام اولیه"
+        android:padding="8dp"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btn_send_msg"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_msg_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_check_cupan_style"
+        android:text="ارسال به مدیر"
+        android:layout_marginBottom="10dp"
+        android:textColor="#fff"
+        android:textSize="@dimen/button_text_size"/>
+</RelativeLayout>

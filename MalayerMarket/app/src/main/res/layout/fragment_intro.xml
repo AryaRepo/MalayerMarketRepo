@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:id="@+id/rel_intro"
+                android:layout_height="match_parent">
+
+    <company.aryasoft.app.malayermarket.UtilityAndHelper.TypeWriter
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:textColor="#FFF"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_centerInParent="true"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

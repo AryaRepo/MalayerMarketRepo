@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <!--detail tab-->
+        <RelativeLayout
+            android:id="@+id/card_container_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txt_product_name_detail"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/detail_card_bg_color_style">
+
+
+                <RelativeLayout
+                    android:id="@+id/img_detail_container"
+                    android:layout_width="200dp"
+                    android:layout_height="240dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/img_card_bg2"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/view_pager_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        app:ci_drawable="@drawable/minus_fill"
+                        app:ci_orientation="horizontal"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/img_detail_container">
+
+                    <ImageButton
+                        android:id="@+id/btn_add_to_basket"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/circular_btn_img"
+                        android:tint="@color/primary"
+                        app:srcCompat="@drawable/cart_plus"/>
+
+                    <TextView
+                        android:id="@+id/txt_add_to_basket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_add_to_basket"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="افزودن به سبد خرید"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/card_sub_title_text_size"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_add_to_my_basket"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txt_add_to_basket"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/circular_btn_img"
+                        android:tint="@color/primary"
+                        app:srcCompat="@drawable/basket_fill"/>
+
+                    <TextView
+                        android:id="@+id/txt_add_to_my_basket"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_add_to_my_basket"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="افزودن به سبد من"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/card_sub_title_text_size"/>
+
+
+                    <ImageButton
+                        android:id="@+id/btn_share_product"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/txt_add_to_my_basket"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/circular_btn_img"
+                        android:tint="@color/primary"
+                        app:srcCompat="@drawable/share"/>
+
+                    <TextView
+                        android:id="@+id/txt_share_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/btn_share_product"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="اشتراک گذاری"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/card_sub_title_text_size"/>
+
+                </RelativeLayout>
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/img_detail_container"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_score_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img_detail_container"
+                            android:layout_marginLeft="20dp"
+                            android:gravity="center_vertical|left"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/secondary_text"
+                            android:textSize="13sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txt_score_detail"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/txt_product_primary_cost_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:textColor="@color/secondary_text"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:id="@+id/txt_product_sale_cost_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:gravity="center"
+                                android:padding="5dp"
+
+                                android:textColor="@color/secondary_text"
+                                android:textSize="15sp"/>
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/txt_product_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|right"
+                            android:lineSpacingExtra="2dp"
+                            android:padding="10dp"
+                            android:textColor="#000"
+                            android:textSize="@dimen/card_sub_title_text_size"/>
+
+
+                        <Button
+                            android:id="@+id/btn_open_features_panel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/btn_product_atributies"
+                            android:text=" ویژگی ها"
+                            android:textColor="@color/icons"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/rel_similar_product_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom">
+
+                            <TextView
+                                android:id="@+id/txt_similar_product_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="10dp"
+                                android:gravity="right"
+                                android:paddingBottom="5dp"
+                                android:paddingRight="@dimen/app_normal_padding"
+                                android:text="محصولات مشابه"
+                                android:textColor="@color/secondary_text"
+                                android:textSize="@dimen/card_title_text_size"/>
+
+
+                            <org.lucasr.twowayview.TwoWayView
+                                android:id="@+id/list_similar_products"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txt_similar_product_detail"
+                                android:layout_marginBottom="10dp"
+                                android:orientation="horizontal"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <!--product features Bottom Sheet-->
+    <include layout="@layout/bottom_sheet_product_feature_layou"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_toolbar_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:text="ویرایش پروفایل"
+        android:textColor="@color/icons"
+        android:textSize="@dimen/collection_names_text_size"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scr_pro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_above="@+id/btn_save_changes"
+        android:layout_below="@+id/txt_toolbar_edit_profile">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_edit_profile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/circle_shape_shadow"
+                android:padding="5dp"/>
+
+            <Button
+                android:id="@+id/btn_choose_profile_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_edit_profile"
+                android:layout_centerHorizontal="true"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:text="انتخاب تصویر"
+                android:textSize="@dimen/card_sub_title_text_size"/>
+
+            <TextView
+                android:id="@+id/txt_birthday"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_alignRight="@+id/edt_user_name_edit"
+                android:layout_below="@id/btn_choose_profile_photo"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_profile_edt_style"
+                android:gravity="center"
+                android:hint="تاریخ تولدتان را انتخاب کنید"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="13sp"/>
+
+            <Button
+                android:id="@+id/btn_choose_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackgroundBorderless"
+                android:layout_alignLeft="@+id/edt_user_name_edit"
+                android:layout_below="@+id/btn_choose_profile_photo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+               style="@style/Widget.AppCompat.Button.Borderless"
+                android:clickable="true"
+                android:text="انتخاب تاریخ تولد"
+                android:textColor="#ff0000"
+                android:padding="8dp"
+                android:textSize="12sp"/>
+
+            <EditText
+                android:id="@+id/edt_user_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/btn_choose_birthday"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_profile_edt_style"
+                android:gravity="center"
+                android:hint="نام خودتون رو وارد کنید"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="@dimen/Edit_text_text_size"/>
+
+
+            <EditText
+                android:id="@+id/edt_user_last_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/edt_user_name_edit"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_profile_edt_style"
+                android:gravity="center"
+                android:hint="نام خانوادگی تون رو وارد کنید"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="@dimen/Edit_text_text_size"/>
+            <EditText
+                android:id="@+id/edt_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/edt_user_last_name_edit"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_profile_edt_style"
+                android:gravity="center"
+                android:hint="ایمیل خود را وارد کنید"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="@dimen/Edit_text_text_size"/>
+            <EditText
+                android:id="@+id/edt_phone_edit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/edt_user_email"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:inputType="phone"
+                android:background="@drawable/edit_profile_edt_style"
+                android:gravity="center"
+                android:hint="شماره تلفن ثابت منزل یا محل کار"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="@dimen/Edit_text_text_size"/>
+
+
+
+            <EditText
+                android:id="@+id/edt_address_edit"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/edt_phone_edit"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_profile_edt_style"
+                android:gravity="center"
+                android:padding="10dp"
+                android:hint="آدرس تون رو وارد کنید"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="@dimen/Edit_text_text_size"/>
+
+            <ir.hamsaa.RtlMaterialSpinner
+                android:id="@+id/sp_zone_lists"
+                android:layout_width="match_parent"
+                android:background="@drawable/edit_text_border"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edt_address_edit"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                app:ms_baseColor="@color/divider"
+                android:gravity="right|center_horizontal|center_vertical"
+                app:ms_alignLabels="false"
+                app:ms_hint="لیست منطقه های ملایر"
+                app:ms_arrowColor="@color/primary"
+                app:ms_enableErrorLabel="false"
+                app:ms_thickness="1dp"
+                app:ms_enableFloatingLabel="false"
+                app:ms_hintColor="@color/primary"
+                app:ms_isRtl="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_save_changes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_send_again_style"
+        android:text="ثبت تغییرات"
+        android:textSize="13sp"
+        android:textColor="@color/icons"/>
+
+</RelativeLayout>

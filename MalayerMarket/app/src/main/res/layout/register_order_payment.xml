@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header_dlg_payment"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="#9C27B0"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="ثبت سفارش"
+        android:textColor="#FFF"
+        android:textSize="17sp"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_date"
+        android:background="@drawable/edit_text_border"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_dlg_payment"
+        android:layout_margin="8dp"
+
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/txt_payment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="زمان تحویل"
+            android:textColor="#FF5722"
+            android:textSize="15sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_today"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/txt_payment_date"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rd_choose_today"
+                android:layout_alignTop="@+id/rd_choose_today"
+                android:layout_toLeftOf="@+id/rd_choose_today"
+                android:gravity="center_vertical"
+                android:text="تحویل در امروز"
+                android:textColor="#000"
+                android:textSize="12sp"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/rd_choose_today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:buttonTint="#795548"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/txt_payment_date">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rd_choose_different"
+                android:layout_alignTop="@+id/rd_choose_different"
+                android:layout_toLeftOf="@+id/rd_choose_different"
+                android:gravity="center_vertical"
+                android:text="در تاریخی دیگر"
+                android:textColor="#000"
+                android:textSize="12sp"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/rd_choose_different"
+                android:layout_width="wrap_content"
+                app:buttonTint="#795548"
+                android:layout_marginRight="8dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_delivery_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_today"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="#FF5722"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_how_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_border"
+        android:layout_below="@id/rel_date"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/txt_payment_how"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="روش پرداخت"
+            android:textColor="#FF5722"
+            android:textSize="15sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_online"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/txt_payment_how"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rd_online_payment"
+                android:layout_alignTop="@+id/rd_online_payment"
+                android:layout_toLeftOf="@+id/rd_online_payment"
+                android:gravity="center_vertical"
+                android:text="پرداخت آنلاین"
+                android:textColor="#000"
+                android:textSize="12sp"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/rd_online_payment"
+                android:layout_width="wrap_content"
+                app:buttonTint="#795548"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_cash"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/txt_payment_how">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rd_cash_payment"
+                android:layout_alignTop="@+id/rd_cash_payment"
+                android:layout_toLeftOf="@+id/rd_cash_payment"
+                android:gravity="center_vertical"
+                android:text=" پرداخت در محل "
+                android:textColor="#000"
+                android:textSize="12sp"/>
+
+            <android.support.v7.widget.AppCompatRadioButton
+                app:buttonTint="#795548"
+                android:id="@+id/rd_cash_payment"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel_how_pay"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_cancel_new_order"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_cancel_order_style"
+            android:text="لغو "
+            android:textColor="#FFF"
+            android:textSize="17sp"/>
+
+        <Button
+            android:id="@+id/btn_register_new_order"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/btn_reg_order_style"
+            android:text="ثبت سفارش"
+            android:textColor="#FFF"
+            android:textSize="17sp"/>
+
+    </LinearLayout>
+</RelativeLayout>

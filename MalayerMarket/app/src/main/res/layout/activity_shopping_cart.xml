@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/include_shopping_cart_toolbar"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_cupan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/include_shopping_cart_toolbar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/txt_helper_cart_cupan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="2dp"
+            android:text="درصورتی که کد کوپن تخفیف دارید میتوانید درباکس زیروارد کنید"
+            android:textColor="#757575"
+            android:textSize="13sp"
+            />
+
+        <EditText
+            android:id="@+id/txt_shopping_cart_cupan"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/txt_helper_cart_cupan"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/btn_check_cupan_validation"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center"
+            android:hint="کد کوپن تخفیف"
+            android:textColorHint="#757575"
+            android:textSize="13sp"/>
+
+        <Button
+            android:id="@+id/btn_check_cupan_validation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_shopping_cart_cupan"
+            android:layout_alignTop="@id/txt_shopping_cart_cupan"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/btn_check_cupan_style"
+            android:padding="8dp"
+            android:text="بررسی و اعمال"
+            android:textColor="#fff"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView_shopping_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:layout_above="@+id/rel_cart_summarize"
+        android:layout_below="@id/include_shopping_cart_toolbar"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:id="@+id/rel_empty_cart"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/shopping_cart_view"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="3dp"
+            android:scaleType="centerInside"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/primary"
+            app:lottie_fileName="cart_animated.json"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopping_cart_view"
+            android:gravity="center"
+            android:text="سبد خرید شما خالی است !"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/primary"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_cart_summarize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/lin_pay_cart_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@drawable/btn_send_again_style"
+                android:clickable="true"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="پرداخت"
+                android:textColor="#fff"
+                android:textSize="18dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@color/primary_dark"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    android:text="مجموع پرداختی"
+                    android:textColor="#fff"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/total_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|bottom|left|right|center_vertical|fill_vertical|center_horizontal|fill_horizontal|center|fill|start|end"
+                    android:padding="4dp"
+                    android:text="0 تومان"
+                    android:textColor="#fff"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+
+            <ImageButton
+                android:id="@+id/btn_clear_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_send_again_style"
+                android:padding="16dp"
+                android:tint="#fff"
+                app:srcCompat="@drawable/ic_empty_cart"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_profit_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lin_pay_cart_info"
+            android:background="@color/primary"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="میزان سود شما 0 تومان شد."
+            android:textColor="#fff"
+            android:textSize="17dp"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+

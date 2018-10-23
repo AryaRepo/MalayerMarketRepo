@@ -1,0 +1,124 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">#fff</item>
+        <item name="android:navigationBarColor">@color/primary</item>
+
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <!--
+         <item name="android:textViewStyle">@style/AppTheme.Widget.TextView</item>
+         <item name="android:editTextStyle">@style/AppTheme.Widget.EditText</item>
+         <item name="android:buttonStyle">@style/AppTheme.Widget.Button</item>
+         <item name="android:autoCompleteTextViewStyle">@style/AppTheme.Widget.ACTextView</item>
+     </style>
+
+      <style name="AppTheme.Widget.TextView" parent="android:Widget.Holo.Light.TextView">
+          <item name="fontPath">fonts/iransans.ttf</item>
+      </style>
+
+      <style name="AppTheme.Widget.EditText" parent="android:Widget.Holo.Light.EditText">
+          <item name="fontPath">fonts/iransans.ttf</item>
+      </style>
+
+      <style name="AppTheme.Widget.Button" parent="android:Widget.Holo.Light.Button">
+          <item name="fontPath">fonts/iransans.ttf</item>
+      </style>
+      <style name="AppTheme.Widget.ACTextView" parent="android:Widget.Holo.Light.AutoCompleteTextView">
+          <item name="fontPath">fonts/iransans.ttf</item>
+      </style>
+  -->
+     <style name="FullscreenTheme" parent="AppTheme">
+         <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+         <item name="android:windowActionBarOverlay">true</item>
+         <item name="android:windowBackground">@null</item>
+         <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+         <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+     </style>
+
+     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+         <item name="android:background">@color/black_overlay</item>
+     </style>
+     <style name="NormalTheme" parent="AppTheme">
+         <item name="colorControlNormal">#fff</item>
+         //the rest of your codes...
+     </style>
+
+    <style name="PaymentDialog">
+        <item name="android:windowEnterAnimation">@anim/modal_in</item>
+        <item name="android:windowExitAnimation">@anim/modal_out</item>
+    </style>
+     <style name="AppTabLayout" parent="Widget.Design.TabLayout">
+         <item name="tabMaxWidth">200dp</item>
+         <item name="tabIndicatorColor">@color/icons</item>
+         <item name="tabIndicatorHeight">2dp</item>
+         <item name="tabPaddingStart">6dp</item>
+         <item name="tabPaddingEnd">6dp</item>
+         <item name="tabBackground">?attr/selectableItemBackground</item>
+         <item name="tabTextAppearance">@style/AppTabTextAppearance</item>
+         <item name="tabSelectedTextColor">@color/icons</item>
+     </style>
+
+     <!-- for tab text -->
+    <style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/tab_label</item>
+        <item name="android:textColor">#F5F5F5</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+
+    <!--activity dialog theme-->
+    <style name="Theme.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+
+    <style name="mytest" parent="android:Widget.Holo.Light.TextView">
+        <item name="fontPath">fonts/sayeh.ttf</item>
+    </style>
+
+       <style name="toolbar_appearance" parent="@style/Widget.AppCompat.Toolbar">
+           <item name="android:textSize">15sp</item>
+           <item name="fontPath">fonts/iransans.ttf</item>
+       </style>
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textSize">11sp</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:textColorPrimary">#37474F</item>
+
+    </style>
+    <style name="AppTheme.Spinner">
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+
+    <style name="SpinnerItem">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="SpinnerDropDownItem">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+   </resources>

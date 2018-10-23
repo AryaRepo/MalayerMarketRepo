@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/include_orders_toolbar"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/orders_animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/include_orders_toolbar"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@android:color/transparent"
+        app:lottie_loop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rel_NoData"
+        android:visibility="gone"
+        android:layout_below="@id/orders_animation_view">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/Nodata_animation_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@android:color/transparent"
+            app:lottie_fileName="empty_box.json"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@id/Nodata_animation_view"
+            android:text="سفارشی هنوز در سیستم مون ثبت نکردی"/>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_orders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orders_animation_view"
+        android:visibility="gone"
+        />
+</RelativeLayout>

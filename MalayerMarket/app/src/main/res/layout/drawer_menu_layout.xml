@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="right"
+                 android:padding="8dp">
+
+        <TableRow
+            android:id="@+id/row_loginRegister"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/nav_menu_title_loginRegister"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/nav_loginRegister"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_loginRegister"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/login_variant"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_manage_profile"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/nav_menu_title_profile_settings"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/nav_profile"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_profile_settings"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/profile_settings"/>
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/row_orders"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/nav_menu_title_myorders"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/nav_myorders"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_myorders"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/ic_order_list"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_fav_cart"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/nav_menu_title_favorite_cart"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/nav_fav_basket"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_favorite_cart"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/ic_favorite_border"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_messages"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/nav_menu_title_messages"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/support_and_messages"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_messages"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/ic_message_envelope"/>
+        </TableRow>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/line_divider"
+            />
+
+        <TableRow
+            android:id="@+id/row_share_app"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center|right">
+
+            <TextView
+                android:id="@+id/nav_menu_title_share"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/nav_share"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_share"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/ic_share_app"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_contact_us"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center|right"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/nav_menu_title_contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/contact_us"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_contact_us"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/ic_contact_us"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row_about_us"
+            android:layout_width="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center|right"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/nav_menu_title_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="25dp"
+                android:text="@string/nav_about_us"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:id="@+id/nav_menu_icon_about_us"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:clickable="false"
+                app:srcCompat="@drawable/ic_about_us"/>
+        </TableRow>
+    </TableLayout>
+</ScrollView>

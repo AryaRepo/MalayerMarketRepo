@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/primary"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:gravity="center"
+            android:layout_weight="0.9"
+            android:paddingRight="8dp"
+            android:text="فعال سازی حساب"
+            android:textColor="#FFF"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <EditText
+            android:id="@+id/edt_validationcode_validation"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="center"
+            android:hint="محل وارد کردن کد فعال سازی"
+            android:inputType="number"
+            android:maxLength="5"
+            android:minWidth="120dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textColor="#000"
+            android:textSize="14sp"/>
+
+
+        <TextView
+
+            android:id="@+id/txt_validation_timer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/edt_validationcode_validation"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:text="00:00"
+            android:textColor="#000"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_send_again_validation"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_send_again_style"
+                android:gravity="center"
+                android:text="ارسال دوباره تا 01:59"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                app:srcCompat="@drawable/ic_refresh"/>
+
+            <ImageButton
+                android:id="@+id/btn_checkvalid_validation"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_send_again_style"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:tint="#FFF"
+                app:srcCompat="@drawable/ic_check"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_paperclip"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/img_ic_invoice"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/ic_invoice"
+                />
+
+            <TextView
+                android:id="@+id/txt_invoice_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_ic_invoice"
+                android:layout_alignTop="@id/img_ic_invoice"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/img_ic_invoice"
+                android:gravity="center"
+                android:text="فاکتور 5410"
+                android:textColor="#000"
+                android:textSize="13sp"/>
+
+            <ImageView
+                android:id="@+id/img_ic_date"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/img_ic_invoice"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/ic_calendar"
+                />
+
+            <TextView
+                android:id="@+id/txt_invoice_date_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_ic_date"
+                android:layout_alignTop="@id/img_ic_date"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/img_ic_date"
+                android:gravity="center"
+                android:text="تاریخ ثبت سفارش : "
+                android:textColor="#000"/>
+            <TextView
+                android:id="@+id/txt_invoice_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_alignBottom="@id/img_ic_date"
+                android:layout_alignTop="@id/img_ic_date"
+                android:layout_toLeftOf="@id/txt_invoice_date_lbl"
+                android:gravity="center"
+                android:textColor="#000"/>
+            <ImageView
+                android:id="@+id/img_ic_delivery_date"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/img_ic_date"
+                android:layout_marginBottom="8dp"
+                app:srcCompat="@drawable/ic_calendar"
+                />
+
+            <TextView
+                android:id="@+id/txt_invoice_delivery_date_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_ic_delivery_date"
+                android:layout_alignTop="@id/img_ic_delivery_date"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/img_ic_delivery_date"
+                android:gravity="center|right"
+                android:text="تاریخ ارسال : "
+                android:textColor="#000"/>
+            <TextView
+                android:id="@+id/txt_invoice_delivery_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:layout_alignBottom="@id/img_ic_delivery_date"
+                android:layout_alignTop="@id/img_ic_delivery_date"
+                android:layout_toLeftOf="@id/txt_invoice_delivery_date_lbl"
+                android:gravity="center"
+                android:textColor="#000"/>
+            <ImageView
+                android:id="@+id/img_ic_status"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/img_ic_delivery_date"
+                app:srcCompat="@drawable/ic_circle_light"
+                />
+
+            <TextView
+                android:id="@+id/txt_ic_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/img_ic_status"
+                android:layout_alignTop="@id/img_ic_status"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@id/img_ic_status"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000"/>
+
+            <Button
+                android:id="@+id/btn_show_order_cart"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_below="@id/txt_ic_status"
+                android:background="@drawable/btn_show_cart_order_style"
+                android:text="مشاهده سبد"
+                android:textColor="#fff"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/txt_ic_ml"
+                fontPath="fonts/dima_sogand.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/btn_show_order_cart"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/btn_show_order_cart"
+                android:layout_below="@id/txt_ic_status"
+                android:layout_toRightOf="@id/btn_show_order_cart"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:text="@string/thanks_you_note"
+                android:textColor="#757575"
+                android:textSize="18sp"
+                tools:ignore="MissingPrefix"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

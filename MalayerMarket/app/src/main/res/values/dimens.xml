@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_text_size">14sp</dimen>
+    <dimen name="Edit_text_text_size">14sp</dimen>
+    <dimen name="card_title_text_size">14sp</dimen>
+    <dimen name="card_sub_title_text_size">11sp</dimen>
+    <dimen name="collection_names_text_size">18sp</dimen>
+    <dimen name="show_more_text_size">12sp</dimen>
+    <dimen name="app_normal_padding">10dp</dimen>
+    <dimen name="app_normal_padding2">5dp</dimen>
+    <dimen name="tab_label">16sp</dimen>
+    <dimen name="custom_tab_layout_height">72dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

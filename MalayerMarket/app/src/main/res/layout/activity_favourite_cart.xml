@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include_favourite_cart_toolbar"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/include_favourite_cart_toolbar">
+
+        <RelativeLayout
+            android:id="@+id/rel_add_new_fav_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:focusable="true"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_toLeftOf="@+id/img_add_fav_cart"
+                android:clickable="false"
+                android:gravity="center|right"
+                android:paddingRight="3dp"
+                android:text="افزودن سبد جدید"
+                android:textColor="#000"/>
+
+            <ImageButton
+                android:id="@+id/img_add_fav_cart"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:tint="@color/primary"
+                app:srcCompat="@drawable/ic_edit"
+                />
+        </RelativeLayout>
+
+        <ListView
+
+            android:id="@+id/listView_favourite_carts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_below="@id/rel_add_new_fav_cart"
+            android:layout_marginTop="3dp"/>
+    </RelativeLayout>
+</RelativeLayout>

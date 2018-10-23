@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">ملایر مارکت</string>
+    <string name="internetDown">
+    اتصال شما به اینترنت برقرار نیست .\n برای استفاده از برنامه باید به اینترنت متصل باشید
+</string>
+
+    <string name="nav_loginRegister">ثبت نام / ورود</string>
+    <string name="nav_profile">مدیریت پروفایل</string>
+    <string name="nav_share">اشتراک گذاری برنامه</string>
+    <string name="nav_myorders">سفارشات من</string>
+    <string name="nav_fav_basket">سبد من </string>
+    <string name="nav_about_us">درباره ما</string>
+    <string name="privacy_policy">قوانین ومقررات</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_closed">closed</string>
+    <string name="app_persian_title">ملایر مارکت</string>
+    <string name="contact_us">تماس با ما</string>
+    <string name="social_network">شبکه های اجتماعی</string>
+    <string name="thanks_you_note">باتشکر از خریدتون  (ملایر مارکت)</string>
+    <string name="order_delivery"> تاریخ تحویل سفارش :</string>
+    <string name="price_unit"> تومان </string>
+    <string name="SliderImageFolder">http://malayermarket.com/Images/Slider/img/</string>
+    <string name="CategoryGroupImageFolder">http://malayermarket.com/Images/ProductGroup/Thumb/</string>
+    <string name="ProductImageFolder">http://malayermarket.com/Images/product/img/</string>
+    <string name="UsersImageFolder">http://malayermarket.com/Images/Person/</string>
+      <string name="merchant_id">73ba6132-bfc6-11e8-813f-000c295eb8fc</string>
+    <string name="product_full_address">http://malayermarket.com/api/Testapi/GetProductInfo/?ProductId=</string>
+    <string name="contact_us_text">
+تماس با ما
+\n
+
+دفتر پشتیبانی : ملایر - خیابان فخریه ( مدنی ) - بن بست نبوت - مجتمع تجاری میلاد - واحد ۴ - شرکت آریا نرم افزار
+\n
+انبار: ملایر - میدان استاندارد - خیابان ۲۰ متری کوشا - نبش ساختمان دکتر شمعدانی
+\n
+info@malayermarket.com : ایمیل
+\n
+تلفن تماس :\n
+081 -32220098
+\n
+09188518897
+\n
+ شکایات\n
+در صورت وجود هرگونه شکایت از خدمات ارائه شده، لطفا متن شکایت و مستندات خود را (در صورت وجود) به آدرس ایمیل(info@malayermarket.com) ارسال نموده و یا به دفتر مرکزی شرکت ارسال نمایید تا در اسرع وقت مورد بررسی قرار گیرد.
+    </string>
+    <string name="about_us">
+درباره ملایر مارکت
+\n
+در دنیای امروزه ی ما با این همه مشغله و برنامه های کاری مختلف، فرصت خریدی آرام و لذت بخش، دست نیافتنی شده است. خریدی که وقت گرانبهای همه ی ما را هدر ندهد. اما چطور میشود که هم وقتمون برای خودمان باشد و هم خریدی شگفت انگیز داشته باشید.\n
+سوپر مارکت آنلاین ملایر مارکت، اپلیکیشن اندرویدی و بهمراه آن سایتی را طراحی کرده با محیط کاربری آسان و طراحی بسیار زیبا، با بیشتر محصولات سوپرماکتی در دسته بندی های منظم و  انواع سبد های متنوع و جذاب، بستری را برای خرید شما همشهریان عزیز فراهم نموده است.\n
+ملایر مارکت محیطی آرام و مطمئن و بسیار ساده فراهم کرده که شما همشهریان گرامی هرجایی که هستید، تحت هر شرایطی، سفارش بدید و درب منزل یا محل کار خودتون تحویل بگیرید. فروشگاه ملایر مارکت سفارش شما را هر جای شهرستان که حضور داشته باشید از زمان سفارش در کمتر از 30 دقیقه تحویل شما خواهد داد.
+
+         </string>
+    <string name="roles">
+         </string>
+    <string name="BasketButtonText">اضافه به سبد</string>
+    <string name="payment_decription">پرداخت هزینه خرید از ملایر مارکت</string>
+    <string name="loading_title">لطفا کمی صبر کنید…</string>
+    <string name="empty_cart_text">کاربرعزیز سبد خریدتان خالی است</string>
+    <string name="help_text_for_loged_user">اگه عضو ملایر مارکت هستی همین الان میتونی وارد شی و توی خونه هرچی میخوای بخری</string>
+    <string name="help_text_for_new_user">اگه عضو ملایر مارکت نیستی همین الان رایگان عضو شو</string>
+    <string name="zarinpal_callback_url">yourapp://malayermarket.com</string>
+    <string name="success_order_text">کاربر عزیز سفارش شما درسیستم ثبت شد.سفارش شما به زودی تحویل شما می گردد.</string>
+    <string name="share_text">را در ملایر مارکت ببینید:</string>
+    <string name="support_and_messages">پشتیبانی و پیام ها</string>
+</resources>

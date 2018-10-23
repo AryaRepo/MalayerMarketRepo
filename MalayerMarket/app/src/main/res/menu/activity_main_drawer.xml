@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  >
+
+    <group android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_loginRegister"
+            android:icon="@drawable/login_variant"
+            android:title="@string/nav_loginRegister" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/profile_settings"
+            android:title="@string/nav_profile" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/nav_share" />
+
+        <item
+            android:id="@+id/nav_myorders"
+            android:icon="@drawable/ic_order_list"
+            android:title="@string/nav_myorders" />
+
+        <item
+            android:id="@+id/nav_fav_basket"
+            android:icon="@drawable/ic_favorite_cart"
+            android:title="@string/nav_fav_basket" />
+    </group>
+
+    <item android:title="" >
+        <menu>
+            <item
+                android:icon="@drawable/ic_contact_us"
+                android:id="@+id/nav_contact_us"
+                android:title="@string/contact_us" />
+            <item
+                android:icon="@drawable/ic_about_us"
+                android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us" />
+            <item
+                android:icon="@drawable/ic_terms_privacy"
+                android:id="@+id/nav_privacy_policy"
+                android:title="@string/privacy_policy" />
+            <item
+                android:id="@+id/nav_social_network"
+                android:icon="@drawable/ic_social_network"
+                android:title="@string/social_network" />
+        </menu>
+    </item>
+
+</menu>

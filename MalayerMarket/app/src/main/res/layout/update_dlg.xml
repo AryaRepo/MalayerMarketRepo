@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/mycolor"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/txt_dialog_title_upd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_weight="0.9"
+            android:paddingRight="8dp"
+            android:text="پیغام سیستم"
+            android:textColor="#FFF"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txt_dialog_message_upd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right|end"
+            android:gravity="right"
+            android:lineSpacingExtra="1dp"
+            android:padding="10dp"
+            android:text="متن پیام"
+            android:textSize="13sp"
+            android:textColor="#000"/>
+    </ScrollView>
+</LinearLayout>

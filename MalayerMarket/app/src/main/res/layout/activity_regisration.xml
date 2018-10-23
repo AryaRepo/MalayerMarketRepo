@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_bg_reg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/rel_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000"
+            android:visibility="gone"/>
+
+        <!--SIGN IN-->
+
+        <RelativeLayout
+            android:id="@+id/rel_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#bbFE1743"
+            android:fitsSystemWindows="true"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/line_reg_tab_color"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/line_reg_tab"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/reg_tab_container_style"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/txt_show_sign_in_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_text_style"/>
+
+
+                <TextView
+                    android:id="@+id/txt_show_sign_up_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/tab_text_style2"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line_reg_tab"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/reg_tab_container_style"
+                android:paddingBottom="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_show_sign_in_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="ورود"
+                    android:textColor="@color/icons"
+                    android:textSize="@dimen/button_text_size"/>
+
+                <include layout="@layout/line_divider_vertical"/>
+
+                <Button
+                    android:id="@+id/btn_show_sign_up_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="ثبت نام"
+                    android:textColor="@color/icons"
+                    android:textSize="@dimen/button_text_size"/>
+
+            </LinearLayout>
+            <!--SIGN IN-->
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/mysc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/line_reg_tab"
+                android:paddingBottom="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/rel_sign_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txt_help_sign_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:text="@string/help_text_for_loged_user"
+                            android:textColor="@color/icons"
+                            android:textSize="14sp"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/login_logo"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"/>
+
+                        <EditText
+                            android:id="@+id/edt_phone_sign_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/edt_sign_in_style"
+                            android:drawableRight="@drawable/ic_phone_white"
+                            android:gravity="right|center_vertical"
+                            android:hint="شماره تلفن همراه"
+                            android:inputType="phone"
+                            android:layout_marginBottom="10dp"
+                            android:maxLength="11"
+                            android:padding="0dp"
+                            android:textColor="@color/icons"
+                            android:textColorHint="@color/icons"
+                            android:textSize="15sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="50dp"
+                            android:background="#88FFEBEE"
+                            android:orientation="vertical"/>
+
+                        <EditText
+                            android:id="@+id/edt_password_sign_in"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/edt_sign_in_style"
+                            android:drawableRight="@drawable/ic_pass_key_white"
+                            android:gravity="right|center_vertical"
+                            android:hint="رمز عبور"
+                            android:inputType="textPassword"
+                            android:textColor="@color/icons"
+                            android:layout_marginBottom="10dp"
+                            android:textColorHint="@color/icons"
+                            android:textSize="15sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="50dp"
+                            android:background="#88FFEBEE"
+                            android:layout_marginBottom="20dp"
+                            android:paddingBottom="20dp"
+                            android:orientation="vertical"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_sign_in"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:background="@drawable/btn_login_style"
+                            android:gravity="center"
+                            android:paddingRight="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_sign_in_white"
+                            android:text=""
+                            android:layout_marginBottom="30dp"
+                            android:textColor="@color/icons"
+                            android:textSize="@dimen/button_text_size"/>
+
+                        <TextView
+                            android:id="@+id/txt_forget_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="20dp"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:text="رمز عبور را فراموش کرده ام"
+                            android:textColor="@color/icons"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+                    <!--SIGN UP-->
+
+
+                    <LinearLayout
+                        android:id="@+id/rel_sign_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txt_help_sign_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:text="@string/help_text_for_new_user"
+                            android:textColor="@color/icons"
+                            android:textSize="14sp"
+                            android:visibility="visible"/>
+
+                        <ImageView
+                            android:id="@+id/sgn_logo"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"/>
+
+                        <EditText
+                            android:id="@+id/edt_phone_sign_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:alpha="1.0"
+                            android:background="@drawable/edt_sign_in_style"
+                            android:drawableRight="@drawable/ic_phone_white"
+                            android:gravity="right|center_vertical"
+                            android:hint="شماره تلفن همراه"
+                            android:inputType="phone"
+                            android:maxLength="11"
+                            android:padding="0dp"
+                            android:textColor="@color/icons"
+                            android:textColorHint="@color/icons"
+                            android:textSize="15sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="50dp"
+                            android:background="#88FFEBEE"
+                            android:orientation="vertical"/>
+
+                        <EditText
+                            android:id="@+id/edt_password_sign_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:alpha="1.0"
+                            android:background="@drawable/edt_sign_in_style"
+                            android:drawableRight="@drawable/ic_pass_key_white"
+                            android:gravity="right|center_vertical"
+                            android:hint="رمز عبور"
+                            android:inputType="textPassword"
+                            android:padding="0dp"
+                            android:textColor="@color/icons"
+                            android:textColorHint="@color/icons"
+                            android:textSize="15sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="50dp"
+                            android:background="#88FFEBEE"
+                            android:orientation="vertical"/>
+
+                        <EditText
+                            android:id="@+id/edt_password_sign_up_rpt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:alpha="1.0"
+                            android:background="@drawable/edt_sign_in_style"
+                            android:drawableRight="@drawable/ic_pass_key_white"
+                            android:gravity="right|center_vertical"
+                            android:hint="تکرار رمز عبور"
+                            android:inputType="textPassword"
+                            android:padding="0dp"
+                            android:textColor="@color/icons"
+                            android:textColorHint="@color/icons"
+                            android:textSize="15sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="50dp"
+                            android:background="#88FFEBEE"
+                            android:orientation="vertical"/>
+
+
+                        <EditText
+                            android:id="@+id/edt_email_sign_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="13dp"
+                            android:alpha="1.0"
+                            android:background="@drawable/edt_sign_in_style"
+                            android:drawableRight="@drawable/ic_email_white"
+                            android:gravity="right|center_vertical"
+                            android:hint="ایمیل (اختیاری) "
+                            android:inputType="textEmailAddress"
+                            android:padding="0dp"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/icons"
+                            android:textColorHint="@color/icons"
+                            android:textSize="15sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="50dp"
+                            android:background="#88FFEBEE"
+                            android:layout_marginBottom="20dp"
+                            android:paddingBottom="20dp"
+                            android:orientation="vertical"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_sign_up"
+                            android:layout_width="200dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/btn_login_style2"
+                            android:gravity="center"
+                            android:paddingRight="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_account_plus_white"
+                            android:text=""
+                            android:textColor="@color/icons"
+                            android:textSize="@dimen/button_text_size"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--Bottom Sheet-->
+    <include layout="@layout/bottom_sheet_layout"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
