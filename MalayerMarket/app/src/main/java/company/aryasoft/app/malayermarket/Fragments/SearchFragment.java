@@ -129,7 +129,7 @@ public class SearchFragment extends Fragment implements OnFailureDataLoadListene
             @Override
             public void onClick(View v)
             {
-                viewSwitcher_search_frg.setDisplayedChild(0);
+
                 HelperModule.hideSoftKey(getActivity(), edt_search);
                 Search(edt_search.getText().toString());
             }
